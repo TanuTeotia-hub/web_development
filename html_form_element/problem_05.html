@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Checkout - GLA University Store</title>
+</head>
+<body>
+
+<h1>E-Commerce Checkout & Delivery Form</h1>
+
+<p>
+GLA University, Greater Noida Online Store checkout page allows you to review your selected
+products and provide delivery and payment details to complete your order. Please fill in all
+required fields carefully before placing your order.
+</p>
+
+<h2>Order Summary</h2>
+<table border="1" cellpadding="6">
+<caption>Selected Products</caption>
+<tr>
+  <th>Product</th>
+  <th>Quantity</th>
+  <th>Unit Price</th>
+  <th>Total</th>
+</tr>
+<tr>
+  <td>Wireless Mouse</td>
+  <td>2</td>
+  <td>₹599</td>
+  <td>₹1198</td>
+</tr>
+<tr>
+  <td>Mechanical Keyboard</td>
+  <td>1</td>
+  <td>₹2499</td>
+  <td>₹2499</td>
+</tr>
+<tr>
+  <td>USB-C Hub</td>
+  <td>1</td>
+  <td>₹899</td>
+  <td>₹899</td>
+</tr>
+</table>
+
+<hr>
+
+<form action="#" method="post">
+
+<h2>Customer Information</h2>
+<table border="1" cellpadding="6">
+<caption>Customer Details</caption>
+
+<tr>
+  <td><label for="custName">Full Name:</label></td>
+  <td><input type="text" id="custName" name="customerName" minlength="3" maxlength="50" placeholder="Enter your full name" autocomplete="name" required></td>
+</tr>
+
+<tr>
+  <td><label for="email">Email Address:</label></td>
+  <td><input type="email" id="email" name="email" placeholder="example@mail.com" autocomplete="email" required></td>
+</tr>
+
+<tr>
+  <td><label for="mobile">Mobile Number:</label></td>
+  <td><input type="tel" id="mobile" name="mobileNumber" pattern="[0-9]{10}" minlength="10" maxlength="10" placeholder="10-digit mobile number" autocomplete="tel" required></td>
+</tr>
+
+</table>
+
+<h2>Delivery Address</h2>
+<table border="1" cellpadding="6">
+<caption>Delivery Details</caption>
+
+<tr>
+  <td><label for="street">House/Street Address:</label></td>
+  <td><textarea id="street" name="streetAddress" rows="3" cols="40" maxlength="150" placeholder="House number, street name" required></textarea></td>
+</tr>
+
+<tr>
+  <td><label for="city">City:</label></td>
+  <td><input type="text" id="city" name="city" minlength="2" maxlength="50" placeholder="Enter your city" required></td>
+</tr>
+
+<tr>
+  <td><label for="state">State:</label></td>
+  <td>
+    <select id="state" name="state" required>
+      <option value="">--Select State--</option>
+      <option value="UP">Uttar Pradesh</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Haryana">Haryana</option>
+      <option value="Punjab">Punjab</option>
+      <option value="Rajasthan">Rajasthan</option>
+      <option value="Maharashtra">Maharashtra</option>
+    </select>
+  </td>
+</tr>
+
+<tr>
+  <td><label for="postalCode">Postal Code:</label></td>
+  <td><input type="text" id="postalCode" name="postalCode" pattern="[0-9]{6}" minlength="6" maxlength="6" placeholder="6-digit postal code" required></td>
+</tr>
+
+<tr>
+  <td><label for="country">Country:</label></td>
+  <td>
+    <select id="country" name="country" required>
+      <option value="">--Select Country--</option>
+      <option value="India">India</option>
+      <option value="USA">United States</option>
+      <option value="UK">United Kingdom</option>
+      <option value="Canada">Canada</option>
+      <option value="Australia">Australia</option>
+    </select>
+  </td>
+</tr>
+
+</table>
+
+<h2>Delivery Options</h2>
+<table border="1" cellpadding="6">
+<caption>Delivery Speed</caption>
+
+<tr>
+  <td><label>Delivery Method:</label></td>
+  <td>
+    <input type="radio" id="deliveryStandard" name="deliveryMethod" value="Standard" required> <label for="deliveryStandard">Standard</label>
+    <input type="radio" id="deliveryExpress" name="deliveryMethod" value="Express"> <label for="deliveryExpress">Express</label>
+    <input type="radio" id="deliverySameDay" name="deliveryMethod" value="SameDay"> <label for="deliverySameDay">Same Day</label>
+  </td>
+</tr>
+
+<tr>
+  <td><label for="instructions">Delivery Instructions:</label></td>
+  <td><textarea id="instructions" name="deliveryInstructions" rows="3" cols="40" maxlength="200" placeholder="e.g. Leave at the front desk"></textarea></td>
+</tr>
+
+</table>
+
+<h2>Payment Details</h2>
+<table border="1" cellpadding="6">
+<caption>Payment Information</caption>
+
+<tr>
+  <td><label>Payment Method:</label></td>
+  <td>
+    <input type="radio" id="payCard" name="paymentMethod" value="Card" required> <label for="payCard">Card</label>
+    <input type="radio" id="payCOD" name="paymentMethod" value="CashOnDelivery"> <label for="payCOD">Cash on Delivery</label>
+    <input type="radio" id="payUPI" name="paymentMethod" value="UPI"> <label for="payUPI">UPI/Online Payment</label>
+  </td>
+</tr>
+
+<tr>
+  <td><label for="cardHolder">Card Holder Name:</label></td>
+  <td><input type="text" id="cardHolder" name="cardHolderName" minlength="3" maxlength="50" placeholder="Name as on card"></td>
+</tr>
+
+<tr>
+  <td><label for="cardNumber">Card Number:</label></td>
+  <td><input type="text" id="cardNumber" name="cardNumber" pattern="[0-9]{16}" minlength="16" maxlength="16" placeholder="16-digit card number"></td>
+</tr>
+
+<tr>
+  <td><label for="expiryDate">Expiry Date (MM/YY):</label></td>
+  <td><input type="text" id="expiryDate" name="expiryDate" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" placeholder="MM/YY"></td>
+</tr>
+
+<tr>
+  <td><label for="cvv">Security Code (CVV):</label></td>
+  <td><input type="password" id="cvv" name="cvv" pattern="[0-9]{3}" minlength="3" maxlength="3" placeholder="3-digit code"></td>
+</tr>
+
+<tr>
+  <td colspan="2">
+    <input type="checkbox" id="billingSame" name="billingSameAsDelivery" value="yes">
+    <label for="billingSame">Billing address is the same as delivery address</label>
+  </td>
+</tr>
+
+</table>
+
+<br>
+
+<input type="submit" value="Place Order">
+<input type="reset" value="Reset Form">
+
+</form>
+
+</body>
+</html>
